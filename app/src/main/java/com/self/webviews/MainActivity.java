@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     public static final String TAG = MainActivity.class.getSimpleName();
+    // View the un-minified htmlContent at https://jsfiddle.net/qqa1mv3n/1/
     public static final String htmlContent = "<html><head></head><body><h1>Android <span id=colorMePink>WebView</span> onContentLoaded Event</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam elit risus, mollis et libero at, imperdiet congue purus. Aliquam erat volutpat. Phasellus sed sodales dui. Duis nibh lectus, venenatis in elit vel, lacinia pretium erat. Donec vitae sem tempus, fermentum ligula sed, placerat ipsum. Nam hendrerit leo mauris, ut ornare sapien venenatis a. Pellentesque eleifend, arcu a congue euismod, neque eros pharetra nibh, id pretium massa velit malesuada turpis. Proin sed cursus massa. Nulla pellentesque et leo at auctor. Pellentesque pretium mauris at posuere consequat.</p><script src=https://cdnjs.cloudflare.com/ajax/libs/zepto/1.1.6/zepto.js></script><script>function checkState(){console.log(document.readyState),\"complete\"==document.readyState?notifyAndroid(\"event=DomLoaded\"):setTimeout(checkState,200)}function applyStyles(){$(\"#colorMePink\").css({color:\"pink\"})}function notifyAndroid(o){location.replace(\"myapp://notifications?\"+o)}document.addEventListener(\"DOMContentLoaded\",function(o){applyStyles(),checkState()});</script></body></html>";
     WebView mWebView;
 
